@@ -26,10 +26,36 @@
   Gravity_ORP ORP3 = Gravity_ORP(A2);  //Define OPR probe on pin A2
   Gravity_ORP ORP4 = Gravity_ORP(A3);  //Define OPR probe on pin A3
   
-  DeviceAddress probe1 = { 0x28, 0x77, 0x17, 0x76, 0xE0, 0x01, 0x3C, 0x91 };  //Store onewire bus address to variable probe1
-  DeviceAddress probe2 = { 0x28, 0x07, 0xEC, 0x76, 0xE0, 0xFF, 0x3C, 0x9A };  //Store onewire bus address to variable probe2
-  DeviceAddress probe3 = { 0x28, 0xCC, 0x27, 0x95, 0xF0, 0x01, 0x3C, 0x61 };  //Store onewire bus address to variable probe3
-  DeviceAddress probe4 = { 0x28, 0x94, 0xB8, 0x76, 0xE0, 0x01, 0x3C, 0xBD };  //Store onewire bus address to variable probe4
+  //DeviceAddress probe1 = { 0x28, 0x77, 0x17, 0x76, 0xE0, 0x01, 0x3C, 0x91 };  //WL1 Store onewire bus address to variable probe1
+  //DeviceAddress probe2 = { 0x28, 0x07, 0xEC, 0x76, 0xE0, 0xFF, 0x3C, 0x9A };  //WL1 Store onewire bus address to variable probe2
+  //DeviceAddress probe3 = { 0x28, 0xCC, 0x27, 0x95, 0xF0, 0x01, 0x3C, 0x61 };  //WL1 Store onewire bus address to variable probe3
+  //DeviceAddress probe4 = { 0x28, 0x94, 0xB8, 0x76, 0xE0, 0x01, 0x3C, 0xBD };  //WL1 Store onewire bus address to variable probe4
+
+  //DeviceAddress probe1 = { 0x28, 0x66, 0x7B, 0x76, 0xE0, 0x01, 0x3C, 0xCD };  //WL2 Store onewire bus address to variable probe1
+  //DeviceAddress probe2 = { 0x28, 0xD9, 0x86, 0x76, 0xE0, 0x01, 0x3C, 0xA4 };  //WL2 Store onewire bus address to variable probe2
+  //DeviceAddress probe3 = { 0x28, 0x1D, 0x83, 0x76, 0xE0, 0x01, 0x3C, 0x35 };  //WL2 Store onewire bus address to variable probe3
+  //DeviceAddress probe4 = { 0x28, 0x1E, 0x5B, 0x76, 0xE0, 0x01, 0x3C, 0x0C };  //WL2 Store onewire bus address to variable probe4
+
+  //DeviceAddress probe1 = { 0x28, 0x82, 0xA4, 0x76, 0xE0, 0x01, 0x3C, 0x09 };  //WL3 Store onewire bus address to variable probe1
+  //DeviceAddress probe2 = { 0x28, 0x68, 0x93, 0x76, 0xE0, 0x01, 0x3C, 0x3A };  //WL3 Store onewire bus address to variable probe2
+  //DeviceAddress probe3 = { 0x28, 0x6B, 0xCE, 0x76, 0xE0, 0x01, 0x3C, 0x1A };  //WL3 Store onewire bus address to variable probe3
+  //DeviceAddress probe4 = { 0x28, 0x37, 0x3A, 0x76, 0xE0, 0x01, 0x3C, 0xF0 };  //WL3 Store onewire bus address to variable probe4
+
+  //DeviceAddress probe1 = { 0x28, 0x82, 0x58, 0x76, 0xE0, 0x01, 0x3C, 0x8E };  //WL5 Store onewire bus address to variable probe1
+  //DeviceAddress probe2 = { 0x28, 0xC4, 0x61, 0x76, 0xE0, 0x01, 0x3C, 0x3E };  //WL5 Store onewire bus address to variable probe2
+  //DeviceAddress probe3 = { 0x28, 0xF5, 0x56, 0x76, 0xE0, 0x01, 0x3C, 0x31 };  //WL5 Store onewire bus address to variable probe3
+  //DeviceAddress probe4 = { 0x28, 0xBE, 0x32, 0x76, 0xE0, 0x01, 0x3C, 0xB2 };  //WL5 Store onewire bus address to variable probe4
+
+  //DeviceAddress probe1 = { 0x28, 0xB7, 0x4C, 0x76, 0xE0, 0x01, 0x3C, 0xEB };  //WL6 Store onewire bus address to variable probe1
+  //DeviceAddress probe2 = { 0x28, 0xB2, 0x67, 0x56, 0xB5, 0x01, 0x3C, 0xB6 };  //WL6 Store onewire bus address to variable probe2
+  //DeviceAddress probe3 = { 0x28, 0xEA, 0x8A, 0x95, 0xF0, 0x01, 0x3C, 0xBA };  //WL6 Store onewire bus address to variable probe3
+  //DeviceAddress probe4 = { 0x28, 0xCC, 0x56, 0x76, 0xE0, 0x01, 0x3C, 0x4A };  //WL6 Store onewire bus address to variable probe4
+
+  DeviceAddress probe1 = { 0x28, 0x79, 0x0B, 0x95, 0xF0, 0x01, 0x3C, 0x54 };  //WL7 Store onewire bus address to variable probe1
+  DeviceAddress probe2 = { 0x28, 0x9B, 0xE9, 0x76, 0xE0, 0x01, 0x3C, 0xC1 };  //WL7 Store onewire bus address to variable probe2
+  DeviceAddress probe3 = { 0x28, 0x6D, 0xF9, 0x95, 0xF0, 0x01, 0x3C, 0xF6 };  //WL7 Store onewire bus address to variable probe3
+  DeviceAddress probe4 = { 0x28, 0x9F, 0x12, 0x95, 0xF0, 0x01, 0x3C, 0x40 };  //WL7 Store onewire bus address to variable probe4
+  
   
   float Celsius1 = sensors.getTempC(probe1);
   float Celsius2 = sensors.getTempC(probe2);
@@ -59,7 +85,7 @@ void loop() {
   DateTime now = rtc.now();                                   //Get current time at start of loop
   rtc.setAlarm1(now + TimeSpan(0, 1, 0, 0),DS3231_A1_Hour);   //Wakeup Interval - 1 hour
   Serial.println("Left Loop");                                //Message for debugging
-  File dataFile = SD.open("wl1log.csv", FILE_WRITE);          //Opens or creates file on SD card
+  File dataFile = SD.open("wl7log.csv", FILE_WRITE);          //Opens or creates file on SD card
 
   sensors.begin();                                            //Activate and poll the Temp sensors
   sensors.setWaitForConversion(false);
@@ -67,7 +93,7 @@ void loop() {
   
   //Main logging function
   if (dataFile) {
-    dataFile.print("WL1"); //Edit to change site information 
+    dataFile.print("WL7"); //Edit to change site information 
     dataFile.print(",");
     dataFile.print(now.year(), DEC);
     dataFile.print("/");
