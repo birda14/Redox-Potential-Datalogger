@@ -85,14 +85,15 @@ void loop() {
   DateTime now = rtc.now();                                   //Get current time at start of loop
   rtc.setAlarm1(now + TimeSpan(0, 1, 0, 0),DS3231_A1_Hour);   //Wakeup Interval - 1 hour
   Serial.println("Left Loop");                                //Message for debugging
-  File dataFile = SD.open("wl7log.csv", FILE_WRITE);          //Opens or creates file on SD card
+  File dataFile = SD.open("wl3log.csv", FILE_WRITE);          //Opens or creates file on SD card
 
   sensors.begin();                                            //Activate and poll the Temp sensors
   sensors.requestTemperatures();
+  delay(1000);
   
   //Main logging function
   if (dataFile) {
-    dataFile.print("WL7"); //Edit to change site information 
+    dataFile.print("WL3"); //Edit to change site information 
     dataFile.print(",");
     dataFile.print(now.year(), DEC);
     dataFile.print("/");

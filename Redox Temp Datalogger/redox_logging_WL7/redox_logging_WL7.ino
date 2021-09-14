@@ -89,6 +89,7 @@ void loop() {
 
   sensors.begin();                                            //Activate and poll the Temp sensors
   sensors.requestTemperatures();
+  delay(1000);
   
   //Main logging function
   if (dataFile) {
