@@ -56,12 +56,6 @@
   DeviceAddress probe3 = { 0x28, 0x6D, 0xF9, 0x95, 0xF0, 0x01, 0x3C, 0xF6 };  //WL7 Store onewire bus address to variable probe3
   DeviceAddress probe4 = { 0x28, 0x9F, 0x12, 0x95, 0xF0, 0x01, 0x3C, 0x40 };  //WL7 Store onewire bus address to variable probe4
   
-  
-  float Celsius1 = sensors.getTempC(probe1);
-  float Celsius2 = sensors.getTempC(probe2);
-  float Celsius3 = sensors.getTempC(probe3);
-  float Celsius4 = sensors.getTempC(probe4);
-  
 //------------------------------------------------------------------------- 
  
 void setup() {
@@ -89,7 +83,12 @@ void loop() {
 
   sensors.begin();                                            //Activate and poll the Temp sensors
   sensors.requestTemperatures();
-  delay(1000);
+  delay(5000);
+
+  float Celsius1 = sensors.getTempC(probe1);
+  float Celsius2 = sensors.getTempC(probe2);
+  float Celsius3 = sensors.getTempC(probe3);
+  float Celsius4 = sensors.getTempC(probe4);
   
   //Main logging function
   if (dataFile) {
